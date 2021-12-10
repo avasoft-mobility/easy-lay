@@ -3,7 +3,7 @@ name: Deploy EasyLay Application
 # Controls when the action will run.
 on:
   push:
-    branches: [ main, dev ]
+    branches: [ main ]
 jobs:
   build_test:
     runs-on: ubuntu-latest
