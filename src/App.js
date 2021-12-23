@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   HashRouter as Router,
   Routes,
@@ -6,8 +6,22 @@ import {
 } from "react-router-dom";
 import './App.css';
 import HomePage from "./pages/HomePage/HomePage";
+import { getAllStores } from "./services/StoreService";
 
-const App = function() {
+const App = () => {
+  useEffect( async () => {
+    try {
+      const response = await getAllStores();
+      if (response.status !== 200) {
+        // Handle Http Error
+      }
+      console.log(response.data);
+    }
+    catch(e) {
+      console.log(e);
+    }
+  }, []);
+
   return (
     <Router>
       <Routes>
