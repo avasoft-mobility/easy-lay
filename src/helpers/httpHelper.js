@@ -57,7 +57,7 @@ const RequestAccessToken = async () => {
   return httpClient.get(Config.ROUTES.ACCESS_TOKEN, {
     headers: {
       API_SERVICE_KEY: process.env.REACT_APP_DEV_API_SERVICE_KEY,
-      JWT_TOKEN_KEY: process.env.REACT_APP_DEV_JWT_TOKEN_KEY
+      JWT_TOKEN_KEY: process.env.REACT_APP_DEV_JWT_TOKEN_KEY,
     },
   });
 };
@@ -105,7 +105,7 @@ axios.interceptors.request.use(async (config) => {
   config.headers = {
     Authorization: `Bearer ${token}`,
     API_SERVICE_KEY: process.env.REACT_APP_DEV_API_SERVICE_KEY,
-    JWT_TOKEN_KEY: process.env.REACT_APP_DEV_JWT_TOKEN_KEY
+    JWT_TOKEN_KEY: process.env.REACT_APP_DEV_JWT_TOKEN_KEY,
   };
   return config;
 });

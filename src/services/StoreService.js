@@ -1,5 +1,5 @@
-import HttpClient from "../helpers/httpHelper";
-import Config from "../configs/config.json"
+import HttpClient from '../helpers/httpHelper';
+import Config from '../configs/config.json';
 
 const getAllStores = async () => {
   try {
@@ -8,7 +8,6 @@ const getAllStores = async () => {
     console.log(error.message);
     return null;
   }
-}
-
+};
 
 export { getAllStores };

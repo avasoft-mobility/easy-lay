@@ -3,7 +3,7 @@ const ENV = Object.freeze({
   qa: 1,
   uat: 2,
   learning: 3,
-  prod: 4
+  prod: 4,
 });
 
 export default ENV;
