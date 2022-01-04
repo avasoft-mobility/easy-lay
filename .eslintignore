@@ -1,0 +1,7 @@
+# Configs
+.eslintrc
+.prettierrc
+tsconfig.json
+
+# Node Modules
+node_modules
