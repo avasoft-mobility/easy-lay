@@ -3,7 +3,7 @@ enum Env {
   qa,
   uat,
   learning,
-  prod
+  prod,
 }
 
 export default Env;
