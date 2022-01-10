@@ -8,6 +8,7 @@
   },
   "ROUTES": {
     "ACCESS_TOKEN": "/api/auth/getToken",
-    "GET_ALL_RETAILERS": "/api/store/getAllOnlineStores"
+    "GET_ALL_RETAILERS": "/api/store/getAllOnlineStores",
+    "POST_RETAILER_LOGO": "/api/store/UploadImage "
   }
 }

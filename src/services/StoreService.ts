@@ -18,6 +18,33 @@ class StoreService {
       };
     }
   };
+
+  static postRetailerLogo = async (ShopLogo : FormData): Promise<HttpResult<boolean>> => {
+    try{
+      const httpClient = await HttpClient.Create<boolean, FormData>();
+      const response = await httpClient.post((String(Config.ROUTES.POST_RETAILER_LOGO)), ShopLogo);
+      if(response.status === HttpStatus.Success) {
+        return {
+          data: true,
+          status:HttpStatus.Success,
+          message: "Store Logo Image added sucessfully"
+        };
+      }
+
+      return {
+        data: null,
+        status: HttpStatus.Failed,
+        message: "Filed to add the store logo"
+      };
+    } catch(error){
+      return {
+        data: null,
+        status: HttpStatus.Failed,
+        message: (error as Error).message,
+      };
+    }
+  }
+
 }
 
 export default StoreService;
